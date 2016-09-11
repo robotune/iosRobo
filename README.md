@@ -6,11 +6,11 @@ The application itself is somewhat mature although written by an objective-c nov
 
 There are numerous other libraries utilised in this application.
 
-https://github.com/alskipp/ASValueTrackingSlider - enhanced horizontal slider
-https://github.com/evnaz/ENPopUp - informational popup modal
-https://github.com/kronik/DKCircleButton - circle buttons with effects
-https://github.com/rnystrom/RNBlurModalView - blur the background and show modal
-https://github.com/thesecretlab/UIView-Glow - glow controls
-https://github.com/UrbanApps/UAProgressView - a circular progress bar
-https://github.com/scalessec/Toast - Android like toast notifications
-https://github.com/Pixate/pixate-freestyle-ios - CSS styling for basic controls
+-https://github.com/alskipp/ASValueTrackingSlider - enhanced horizontal slider
+-https://github.com/evnaz/ENPopUp - informational popup modal
+-https://github.com/kronik/DKCircleButton - circle buttons with effects
+-https://github.com/rnystrom/RNBlurModalView - blur the background and show modal
+-https://github.com/thesecretlab/UIView-Glow - glow controls
+-https://github.com/UrbanApps/UAProgressView - a circular progress bar
+-https://github.com/scalessec/Toast - Android like toast notifications
+-https://github.com/Pixate/pixate-freestyle-ios - CSS styling for basic controls
