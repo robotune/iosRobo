@@ -4,19 +4,13 @@
 </CsOptions>
 <CsInstruments>
 
-;TO DO: FINALISE 'SCALE': a bit noisy on tempo change?
-;look at key...all ok? test against file in given key...get files from web...
+;TO DO: finalise 'scale': a bit noisy on tempo change?
 ;add tempo track to delay effect?
 ;file play: move to csound to enable overdubbiing to new file?? playback m4a?
-;initialise everything to a good default (test print all) to avoid port at start? including presets...
 
 ;more trivial:
 ;pvscale bug? seems to add noise if used in signal flow a lot?
 ;try harmonic minor, more common? sharpened 7th...just move 7th up if recognised as opposed to putting it in scale.
-;what needs portamento and what does not?
-;test against older versions for audio quality!
-;try also mccurdy port trick for opening gate quickly...? try compress opcode if gate problematic? 
-;http://www.csounds.com/journal/issue17/heintz.html chnclear?
 ;need to start record on click?: performer based test needed! 
 
 ksmps = 256	  ;reduces any dropout
