@@ -5,7 +5,7 @@
 <CsInstruments>
 
 ;TO DO: finalise 'scale': a bit noisy on tempo change?
-;add tempo track to delay effect?
+;add tempo-track to delay effect?
 ;file play: move to csound to enable overdubbiing to new file?? playback m4a?
 
 ;more trivial:
@@ -240,6 +240,7 @@ if abs(kharm3) > 0 then
 	if kharm3chng == 1 then
 		kscl3 = 2 ^ (kharm3 / 12)
 	endif
+	fharm3 pvscale fsig, kratioport * kscl3
 endif 
 kgoto resynth 
 
@@ -269,6 +270,8 @@ if abs(kharm3) > 0 then
 	if kharm3chng == 1 then
 		kscl3 = 2 ^ (kharm3 / 12)
 	endif
+	fauto3 pvscross fbuzz, fsig, kcross, 1. - kcross
+	fharm3 pvscale fauto3, kscl3
 endif 
 
 kgoto resynth
@@ -284,12 +287,7 @@ if abs(kharm2) > 0 then
     aout2 pvsynth fharm2
 endif
 if abs(kharm3) > 0 then
-	if (ksource == 0) then
-		aout3 pvsadsyn fsig, 10, kratioport * kscl3, 10		; optimisation: ideally just a low end voice 
-	endif
-	if (ksource == 1) then
-		aout3 pvsadsyn fauto, 10, kscl3, 10
-	endif
+    aout3 pvsynth fharm3
 endif
 
 kgoto output
@@ -665,12 +663,9 @@ instr 21	; play loop
 
 anosync init 0
 klooplevel chnget "looplevel"
-;NEW!: 0, 1 OR 2
-;klooptype chnget "looptype"
-ilooptype = i(gklooptype)
-print ilooptype
-;NEW! init to 1
-klooppitch chnget "looppitch"
+
+;add? init to 1
+;klooppitch chnget "looppitch"
 
 andx phasor (sr/gklooplen)
 kTrigDisp metro	   10 
